@@ -1,0 +1,17 @@
+<h1>New supplier</h1>
+
+<%= form_for Supplier.new do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name%>
+	<%= f.label :phone %>
+	<%= f.text_field :phone%>
+	<%= f.label :cathegory %>
+	<%= f.text_field :cathegory%>
+	<%= f.label :address %>
+	<%= f.text_field :address%>
+	<%= f.label :city %>
+	<%= f.text_field :city%>
+	<%= f.submit "Add Supplier"%>
+<% end%>
+
+<%= link_to 'Back', suppliers_path %>
