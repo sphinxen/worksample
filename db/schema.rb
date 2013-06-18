@@ -11,12 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130618111102) do
+ActiveRecord::Schema.define(:version => 20130618143647) do
 
   create_table "suppliers", :force => true do |t|
     t.string   "name"
     t.string   "phone"
-    t.string   "cathegory"
+    t.string   "category"
     t.string   "address"
     t.string   "city"
     t.float    "longitude"
