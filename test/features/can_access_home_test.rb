@@ -6,7 +6,7 @@ class CanAccessHomeTest < Capybara::Rails::TestCase
   	
     visit suppliers_path
 
-    click_link 'Add'
+    click_link 'Add Supplier'
 
     current_path.must_equal new_supplier_path
 
@@ -18,7 +18,7 @@ class CanAccessHomeTest < Capybara::Rails::TestCase
     click_button "Add Supplier"
 
 
-    #current_path.must_equal root_path
+    current_path.must_equal suppliers_path
     save_and_open_page
   end
 end

@@ -1,8 +1,9 @@
 <h1>Suppliers</h1>
 
 <%= gmaps4rails(@json) %>
-<%= link_to 'Add', new_supplier_path %>
-
+<%= form_for :suppliers, :url => {:action => 'index'} do |f| %>
+<%= select_tag :id, options_for_select(@suppliers.collect{ |u| [u.cathegory, u.id] }),{ :prompt => "Filter category", :onchange => "this.form.submit();"}  %>
+<% end%>
 <script type="text/javascript">
 $(document).ready(function() {
 Gmaps.map.callback = function() {
