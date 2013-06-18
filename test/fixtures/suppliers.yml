@@ -7,6 +7,9 @@ one:
   cathegory: MyString
   address: MyString
   city: MyString
+  longitude: 1.5
+  latitude: 1.5
+  gmaps: false
 
 two:
   name: MyString
@@ -14,3 +17,6 @@ two:
   cathegory: MyString
   address: MyString
   city: MyString
+  longitude: 1.5
+  latitude: 1.5
+  gmaps: false

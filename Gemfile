@@ -28,8 +28,10 @@ group :development, :test do
   gem 'minitest-rails-capybara'
   gem 'minitest-colorize'
   gem 'turn'
+  gem 'launchy'
 
   gem 'gmaps4rails'
+#  gem 'geocoder'
 
   # gem 'minitest-growl'
   # gem 'growl_notify'

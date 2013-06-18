@@ -4,7 +4,11 @@ class CanAccessHomeTest < Capybara::Rails::TestCase
   test "add supplier" do
   	@supplier = Supplier.create :name => 'ICA', :phone => '555-687 558', :cathegory => 'milk', :address => 'Fogdevagen 7a', :city => 'Karlskrona'
   	
-    visit new_supplier_path
+    visit suppliers_path
+
+    click_link 'Add'
+
+    current_path.must_equal new_supplier_path
 
     fill_in 'Name', 	:with => "ICA"
     fill_in 'Phone', 	:with => '555-687 558'
@@ -13,7 +17,8 @@ class CanAccessHomeTest < Capybara::Rails::TestCase
     fill_in 'City',		:with => 'Karlskrona'
     click_button "Add Supplier"
 
-    # assert_have_content page, "ICA"
-    # refute_have_content page, "Goobye All!"
+
+    #current_path.must_equal root_path
+    save_and_open_page
   end
 end
