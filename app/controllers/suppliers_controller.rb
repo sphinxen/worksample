@@ -7,7 +7,7 @@ class SuppliersController < ApplicationController
   		@suppliers = Supplier.all
   	end
 
-  	@title = "SupplyME" 
+  	@title = "SupplyME | Overview" 
     @categoryselect = 'categoryselect'
   	@categorys = Supplier.group('category')
   	@category = params[:category]

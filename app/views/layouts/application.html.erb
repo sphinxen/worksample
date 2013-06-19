@@ -10,11 +10,11 @@
 <body>
 <div class="wrapper">
 	<nav id="top_menu">
-		<%= link_to image_tag('logo.png'), root_path %>
+		<%= link_to image_tag('logo.png'), root_path, :class => 'logo' %>
 	</nav>
 	<div class="content">
 		<div class="content left">
-			<%= render 'mainmenu'%>
+			<%= render :partial => 'menus/mainmenu' %>
 		</div>
 		<div class="content main">
 		<% flash.each do |name, message| %>

@@ -33,6 +33,14 @@ body{
 	font-family:Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+footer{
+	padding: 15px 25px 10px 25px;
+}
+
+form > input{
+	display: block;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: century_gothic;
 }
@@ -49,6 +57,10 @@ a{
 	a:link{color:black;}
 	a:visited{color:black;}
 	a:hover{color:gray;}
+	.logo{
+		position:relative;
+		top: 35px;
+	}
 	li{
 		display: inline-block;
 		padding: 0 15px;
@@ -60,15 +72,21 @@ a{
 
 #main_menu{
 	text-align:right;
-	// background:#D0E0E3;
-	// padding:10px 15px;
 	a:link{color:black;}
 	a:visited{color:black;}
 	a:hover{color:gray;}
-	li{
-		// display: inline-block;
-		padding: 0 15px;
+	ul{
+		position:relative;
+		top: 30px;
 	}
+	li{
+		padding: 5px 15px;
+	}
+}
+
+.new_supplier, .edit_supplier{
+	margin-top: 25px;
+	input{margin-bottom: 15px; margin-top:5px}
 }
 
 #flash_notice{
@@ -89,23 +107,34 @@ a{
 .wrapper{
 	max-width: 1024px;
 	margin: auto;
-
+	box-shadow: 10px 10px 25px #888888;
+	border-left: 1px solid #f2f2f2;
 }
 
 .content {
-	padding: 10px 0;
 	display: inline-block;
+ 	height: 100%;
+ 	background: #d0e0e3; /* Old browsers */
+	background: -moz-linear-gradient(top,  #d0e0e3 0%, #cbebff 47%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d0e0e3), color-stop(47%,#cbebff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #d0e0e3 0%,#cbebff 47%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #d0e0e3 0%,#cbebff 47%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #d0e0e3 0%,#cbebff 47%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #d0e0e3 0%,#cbebff 47%,#ffffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0e0e3', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }
 
 .content.left{
+	float:left;
+	background:none;
 	min-width:175px;
-	border:1px solid #f2f2f2;
 }
 
 .content.main{
+	border-radius:50px 0 0 0;
 	.map_container{margin:10px 30px}
-	padding: 10px;
-
+	padding: 30px;
+	background: #FFF;
 }
 
 .infowindow{

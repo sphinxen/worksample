@@ -26,6 +26,7 @@ group :development, :test do
   gem 'guard-minitest'
   gem 'capybara'
   gem 'minitest-rails-capybara'
+  gem 'capybara_minitest_spec'
   gem 'minitest-colorize'
   gem 'turn'
   gem 'launchy'

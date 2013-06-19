@@ -1,5 +1,7 @@
 Worksample::Application.routes.draw do
-  root :to => "suppliers#index"
+  get "home/index"
+
+  root :to => "home#index"
   resources :suppliers
   # The priority is based upon order of creation:
   # first created -> highest priority.
