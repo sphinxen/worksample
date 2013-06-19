@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= :title%></title>
+  <title><%= @title%></title>
+  <%= favicon_link_tag 'logo.ico' %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <div class="wrapper">
-	<nav id="top_menu" class="clearfix">
-		<%= render 'leftmenu'%>
+	<nav id="top_menu">
+		<%= link_to image_tag('logo.png'), root_path %>
 	</nav>
-	<div class="content clearfix">
+	<div class="content">
 		<div class="content left">
-			<nav id="main_menu" class="clearfix">
-		<ul>
-			<li><%= link_to 'Home', suppliers_path %></li>
-			<li><%= link_to 'Add Supplier', new_supplier_path %></li>
-		</ul>
-		</nav>
+			<%= render 'mainmenu'%>
 		</div>
 		<div class="content main">
 		<%= yield %>
 		</div>
 	</div>
+
+<footer>
+	&copy; 2013 by <%= mail_to 'sphinxen@gmail.com', 'Josef Karlsson' %>
+</footer>
 </div>
 <%= yield :scripts %>
 

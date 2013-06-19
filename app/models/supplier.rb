@@ -3,5 +3,5 @@ class Supplier < ActiveRecord::Base
   def gmaps4rails_address
   "#{address}, #{city}"
   end
-  attr_accessible :address, :category, :city, :latitude, :longitude, :name, :phone
+  attr_accessible :address, :category, :city, :latitude, :longitude, :name, :phone, :email
 end

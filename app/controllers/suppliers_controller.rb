@@ -7,7 +7,8 @@ class SuppliersController < ApplicationController
   		@suppliers = Supplier.all
   	end
 
-  	@title = "home" 
+  	@title = "SupplyME" 
+    @categoryselect = 'categoryselect'
   	@categorys = Supplier.group('category')
   	@category = params[:category]
   	@json = @suppliers.to_gmaps4rails do |supplier, marker|
@@ -21,9 +22,17 @@ class SuppliersController < ApplicationController
 
   end
 
+  def new
+    @supplier = Supplier.new
+  end
+
   def create
   	Supplier.create params[:supplier]
 
   	redirect_to suppliers_path
+  end
+
+  def edit
+    @supplier = Supplier.find params[:id]
   end
 end

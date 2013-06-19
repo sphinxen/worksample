@@ -44,7 +44,6 @@ a{
 }
 
 #top_menu{
-	text-align:right;
 	background:#D0E0E3;
 	padding:10px 15px;
 	a:link{color:black;}
@@ -81,18 +80,18 @@ a{
 
 .content {
 	padding: 10px 0;
-	width: 100%;
 	display: inline-block;
 }
 
 .content.left{
-	width:15%;
+	min-width:175px;
 	border:1px solid #f2f2f2;
 }
 
 .content.main{
-	.map_container{margin:30px auto}
-	max-width:84%;
+	.map_container{margin:10px 30px}
+	padding: 10px;
+
 }
 
 .infowindow{
@@ -105,5 +104,11 @@ a{
 		margin-top:2em;
 		border-top:1px solid #f2f2f2;
 	}
+}
+
+.categoryselect{
+	margin-top:10px;
+	margin-right: 25px;
+	text-align:right;
 }
 
