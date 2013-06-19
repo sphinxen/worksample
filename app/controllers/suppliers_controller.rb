@@ -35,4 +35,14 @@ class SuppliersController < ApplicationController
   def edit
     @supplier = Supplier.find params[:id]
   end
+
+  def update
+    supplier = Supplier.find params[:id]
+
+    if supplier.update_attributes params[:supplier]
+      redirect_to suppliers_path, :notice => "The supplier was successfully updated"
+    else
+      redirect_to :back, :alert => "There was an error updating the supplier"
+    end
+  end
 end

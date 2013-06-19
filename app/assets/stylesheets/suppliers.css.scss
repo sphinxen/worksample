@@ -71,6 +71,20 @@ a{
 	}
 }
 
+#flash_notice{
+	background:green;
+	border: 1px solid darken(green, 20%);
+	text-align:center;
+	color: white;
+}
+
+#flash_alert{
+	background:red;
+	border: 1px solid darken(red, 20%);
+	text-align:center;
+	color:white;
+}
+
 
 .wrapper{
 	max-width: 1024px;

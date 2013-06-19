@@ -17,6 +17,12 @@
 			<%= render 'mainmenu'%>
 		</div>
 		<div class="content main">
+		<% flash.each do |name, message| %>
+		<div id="flash_<%= name%>">
+			<%= message %>
+		</div>
+
+		<%end%>
 		<%= yield %>
 		</div>
 	</div>
