@@ -7,12 +7,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav>
-	<%= link_to 'Add Supplier', new_supplier_path %>
-</nav>
-
-<%= yield %>
-
+<div class="wrapper">
+	<nav id="top_menu" class="clearfix">
+		<%= render 'leftmenu'%>
+	</nav>
+	<div class="content clearfix">
+		<div class="content left">
+			<nav id="main_menu" class="clearfix">
+		<ul>
+			<li><%= link_to 'Home', suppliers_path %></li>
+			<li><%= link_to 'Add Supplier', new_supplier_path %></li>
+		</ul>
+		</nav>
+		</div>
+		<div class="content main">
+		<%= yield %>
+		</div>
+	</div>
+</div>
 <%= yield :scripts %>
+
 </body>
 </html>

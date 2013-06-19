@@ -1,3 +1,109 @@
 // Place all the styles related to the Suppliers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/** --------------------------------------------------------------
+ * Reset. http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126
+ *
+ */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,
+figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,
+time,mark,audio,video{margin:0;padding:0;border:0;font-size:100.01%;font:inherit;vertical-align:baseline;}
+body{line-height:1;}
+ol,ul{list-style: none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+
+.clearfix{
+  *zoom:1;
+  &:before, &:after {content:"";display:table;}
+  &:after {clear:both;}
+}
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+@font-face {
+	font-family: 'century_gothic';
+	src: url('century_gothic.ttf') format('truetype');
+}
+
+body{
+	font-family:Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: century_gothic;
+}
+
+h1{font-size: 200%}
+
+a{
+	text-decoration: none;
+}
+
+#top_menu{
+	text-align:right;
+	background:#D0E0E3;
+	padding:10px 15px;
+	a:link{color:black;}
+	a:visited{color:black;}
+	a:hover{color:gray;}
+	li{
+		display: inline-block;
+		padding: 0 15px;
+	}
+	li:nth-child(n+2){
+		border-left: 1px solid;
+	}
+}
+
+#main_menu{
+	text-align:right;
+	// background:#D0E0E3;
+	// padding:10px 15px;
+	a:link{color:black;}
+	a:visited{color:black;}
+	a:hover{color:gray;}
+	li{
+		// display: inline-block;
+		padding: 0 15px;
+	}
+}
+
+
+.wrapper{
+	max-width: 1024px;
+	margin: auto;
+
+}
+
+.content {
+	padding: 10px 0;
+	width: 100%;
+	display: inline-block;
+}
+
+.content.left{
+	width:15%;
+	border:1px solid #f2f2f2;
+}
+
+.content.main{
+	.map_container{margin:30px auto}
+	max-width:84%;
+}
+
+.infowindow{
+	overflow:hidden !important;
+	li{
+		list-style: none;
+	}
+
+	.info_menu{
+		margin-top:2em;
+		border-top:1px solid #f2f2f2;
+	}
+}
+

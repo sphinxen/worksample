@@ -4,9 +4,10 @@
 one:
   name: MyString
   phone: MyString
-  cathegory: MyString
+  category: MyString
   address: MyString
   city: MyString
+  email: MyString
   longitude: 1.5
   latitude: 1.5
   gmaps: false
@@ -14,9 +15,10 @@ one:
 two:
   name: MyString
   phone: MyString
-  cathegory: MyString
+  category: MyString
   address: MyString
   city: MyString
+  email: MyString
   longitude: 1.5
   latitude: 1.5
   gmaps: false

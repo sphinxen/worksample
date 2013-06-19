@@ -1,2 +1,13 @@
+<div class="infowindow">
 <h1><%= supplier.name %></h1>
-<p>Categrory: <%= supplier.category %></p>
+<ul>
+	<li><%= supplier.address %></li>
+	<li><%= supplier.city %></li>
+	<li><%= link_to supplier.phone, "tel:#{supplier.phone}" %></li>
+	<li><%= mail_to supplier.email %></li>
+</ul>
+
+<div class="info_menu">
+<%= link_to "edit", edit_supplier_path(:this) %>
+</div>
+</div>
