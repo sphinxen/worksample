@@ -1,3 +1,0 @@
-<%= form_for :suppliers, :url => {:action => 'index'} do |f| %>
-<%= select_tag :category, options_for_select(@categorys.collect{ |u| [u.category] }, @category),{ :prompt => "Filter category", :onchange => "this.form.submit();"}  %>
-<% end%>

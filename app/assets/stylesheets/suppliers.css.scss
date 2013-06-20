@@ -75,6 +75,10 @@ a{
 	a:link{color:black;}
 	a:visited{color:black;}
 	a:hover{color:gray;}
+	a.active{
+		color:white;
+		font-weight: bold;
+	}
 	ul{
 		position:relative;
 		top: 30px;

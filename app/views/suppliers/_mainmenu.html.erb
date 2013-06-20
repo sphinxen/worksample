@@ -1,6 +1,0 @@
-	<nav id="main_menu">
-	<ul>
-		<li><%= link_to 'Home', suppliers_path, {:class => "#{'active' if request.fullpath == suppliers_path || request.fullpath == root_path}"} %></li>
-		<li><%= link_to 'Add Supplier', new_supplier_path, {:class => "#{'active' if request.fullpath == new_supplier_path}"} %></li>
-	</ul>
-	</nav>
