@@ -8,7 +8,7 @@ class CrudSupplierTest < ActionDispatch::IntegrationTest
   it "add supplier" do
     visit suppliers_path
 
-    click_link 'Add Supplier'
+    click_link 'Add'
 
     current_path.must_equal new_supplier_path
 
