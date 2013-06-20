@@ -1,7 +1,11 @@
 	<nav id="main_menu">
 	<ul>
 		<li><%= link_to 'Home', root_path, {:class => "#{'active' if request.fullpath == home_index_path || request.fullpath == root_path}"} %></li>
-		<li><%= link_to 'View Suppliers', suppliers_path, {:class => "#{'active' if request.fullpath == suppliers_path}"} %></li>
-		<li><%= link_to 'Add Supplier', new_supplier_path, {:class => "#{'active' if request.fullpath == new_supplier_path}"} %></li>
+		<li class="submenu"><p>Suppliers</p>
+			<ul>
+				<li><%= link_to 'View', suppliers_path, {:class => "#{'active' if request.fullpath == suppliers_path}"} %></li>
+				<li><%= link_to 'Add', new_supplier_path, {:class => "#{'active' if request.fullpath == new_supplier_path}"} %></li>
+			</ul>
+		</li>
 	</ul>
 	</nav>

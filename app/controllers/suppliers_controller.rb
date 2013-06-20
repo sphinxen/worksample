@@ -46,6 +46,10 @@ class SuppliersController < ApplicationController
     end
   end
 
+  def show
+     @supplier = Supplier.find params[:id]
+  end
+
   def destroy
     Supplier.destroy params[:id]
     redirect_to new_supplier_path, :notice => "Supplier successfully deleted"

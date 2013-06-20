@@ -1,0 +1,7 @@
+<h1><%= @supplier.name %></h1>
+<ul>
+	<li><%= @supplier.address %></li>
+	<li><%= @supplier.city %></li>
+	<li><%= link_to @supplier.phone, "tel:#{@supplier.phone}" %></li>
+	<li><%= mail_to @supplier.email %></li>
+</ul>
