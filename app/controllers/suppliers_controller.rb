@@ -45,4 +45,9 @@ class SuppliersController < ApplicationController
       redirect_to :back, :alert => "There was an error updating the supplier"
     end
   end
+
+  def destroy
+    Supplier.destroy params[:id]
+    redirect_to new_supplier_path, :notice => "Supplier successfully deleted"
+  end
 end

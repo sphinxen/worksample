@@ -49,4 +49,11 @@ class CrudSupplierTest < ActionDispatch::IntegrationTest
     current_path.must_equal edit_supplier_path(@supplier)
     page.must_have_content "There was an error updating the supplier"
   end
+
+  it "should delete supplier" do
+  	visit edit_supplier_path(@supplier)
+  	click_link 'Delete Supplier'
+
+  	page.must_have_content "Supplier successfully deleted"
+  end
 end

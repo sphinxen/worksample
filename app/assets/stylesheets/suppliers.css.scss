@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: century_gothic;
 }
 
-h1{font-size: 200%}
+h1{font-size: 200%; line-height: 200%;}
 
 a{
 	text-decoration: none;
@@ -74,9 +74,9 @@ a{
 	text-align:right;
 	a:link{color:black;}
 	a:visited{color:black;}
-	a:hover{color:gray;}
+	a:hover{color:#f2f2f2;}
 	a.active{
-		color:white;
+		color:#789AC7;
 		font-weight: bold;
 	}
 	ul{
